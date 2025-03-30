@@ -77,7 +77,6 @@ const AwardForm = ({ award, onSubmit, onCancel }: AwardFormProps) => {
               value={date}
               onChange={(e) => setDate(e.target.value)}
               placeholder="e.g., March 2024"
-              required
             />
           </div>
           
@@ -88,7 +87,6 @@ const AwardForm = ({ award, onSubmit, onCancel }: AwardFormProps) => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={4}
-              required
             />
           </div>
           
@@ -100,7 +98,6 @@ const AwardForm = ({ award, onSubmit, onCancel }: AwardFormProps) => {
               value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
               placeholder="Enter image URL"
-              required
             />
           </div>
           
