@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { Calendar as CalendarIcon, Award as AwardIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import Navbar from "@/components/Navbar";
+import BlackNavbar from "@/components/BlackNavbar";
 
 const parseDate = (dateString: string): Date => {
   const cleanedDateString = dateString.replace(/(\d+)(st|nd|rd|th)/, "$1"); // Remove ordinal suffix
@@ -28,6 +29,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <div className="pt-32 md:pt-36">
         {/* No Navbar here anymore as it's now in App.tsx */}
+        <BlackNavbar />
         <Navbar /> 
       </div>
       
