@@ -197,16 +197,12 @@ const Index = () => {
 <TabsContent value="awards" className="mt-2">
   {awards.length > 0 ? (
     <div className="space-y-6">
-      {/* Filter unique awards and sort by date */}
+      {/* Filter unique awards and sort by year */}
       {awards
         .filter((award, index, self) =>
           index === self.findIndex((a) => a.title === award.title)
         )
-        .sort((a, b) => {
-          const dateA = parseDate(a.date);
-          const dateB = parseDate(b.date);
-          return dateB.getTime() - dateA.getTime();
-        })
+        .sort((a, b) => parseInt(b.date) - parseInt(a.date)) // Sorting by year only
         .map((award) => (
           <Link to={`/award/${award.id}`} key={award.id} className="block">
             <Card className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
@@ -239,6 +235,7 @@ const Index = () => {
     </Card>
   )}
 </TabsContent>
+
 
 
 
